@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".YouPlayActivity">
+
+    <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/youtube_player_view"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        app:showSeekBar="false"
+        app:showFullScreenButton="true"
+        app:showVideoDuration="true"
+        app:showVideoCurrentTime="true"
+        app:enableLiveVideoUi="true"
+        app:autoPlay="true"
+
+
+
+        />
+<androidx.appcompat.widget.AppCompatTextView
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:id="@+id/nameofvideo"
+    android:textSize="18dp"
+    android:textColor="@color/white"
+    android:background="@color/black"
+    android:text="vide"
+    android:layout_margin="5dp"
+    android:layout_below="@+id/youtube_player_view"/>
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:id="@+id/description"
+        android:text="description"
+        android:layout_margin="5dp"
+        android:layout_below="@+id/nameofvideo"/>
+</RelativeLayout>

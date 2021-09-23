@@ -1,0 +1,164 @@
+  <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent" android:layout_height="match_parent" tools:context=".MainActivity">
+
+       <androidx.cardview.widget.CardView
+           android:layout_width="match_parent"
+           android:layout_height="60dp"
+           android:onClick="showview"
+           android:id="@+id/ard"
+           >
+        <androidx.appcompat.widget.Toolbar android:id="@+id/my_toolbar" android:layout_width="match_parent" android:layout_height="?attr/actionBarSize" android:background="@color/white" android:theme="@style/ThemeOverlay.AppCompat.ActionBar" app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="horizontal">
+                <androidx.appcompat.widget.AppCompatImageButton
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+
+                    app:iconSize="24dp"
+                    app:iconPadding="0dp"
+
+
+                    android:background="@drawable/roundcorner"
+                    android:src="@drawable/person"
+                    android:insetLeft="0dp"
+                    android:layout_gravity="center"
+                    android:insetTop="0dp"
+                    android:insetRight="0dp"
+                    android:insetBottom="0dp"
+
+
+                    app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MyApp.Button.Rounded"/>
+                <androidx.appcompat.widget.AppCompatImageButton
+                    android:layout_width="40dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_gravity="center"
+                    android:padding="3dp"
+                    android:id="@+id/search"
+                    android:background="@drawable/roundcorner"
+                    android:src="@drawable/search"
+                    android:layout_height="40dp"/>
+                <RelativeLayout android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/icontext"
+                        android:layout_width="40dp"
+                        android:layout_height="match_parent"
+                        android:layout_toLeftOf="@id/icon"
+                        android:gravity="center"
+                        android:text="iETube"
+                        android:textAlignment="center"
+                        android:textColor="@color/red"
+                        android:textStyle="bold"
+                        android:typeface="monospace"
+                        app:fontFamily="sans-serif-condensed" />
+                    <androidx.appcompat.widget.AppCompatImageButton
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/select"
+                        android:background="@drawable/roundcorner"
+
+                        app:iconSize="24dp"
+                        app:iconPadding="0dp"
+                        android:insetLeft="0dp"
+                        android:insetTop="0dp"
+                        android:insetRight="0dp"
+                        android:insetBottom="0dp"
+                        android:id="@+id/playtype"
+
+                        android:layout_toLeftOf="@+id/icontext"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/type"
+                        android:layout_width="100dp"
+                        android:layout_height="40dp"
+
+                        android:layout_marginTop="10dp"
+
+                        android:layout_marginEnd="10dp"
+                        android:text="Trending"
+                        android:gravity="center"
+                        android:layout_marginBottom="10dp"
+                        android:layout_toLeftOf="@+id/playtype"
+                        android:background="@drawable/roundcorner"
+                        android:outlineAmbientShadowColor="@color/red"
+                       />
+                    <androidx.appcompat.widget.AppCompatImageButton
+                        android:layout_width="40dp"
+                        android:layout_margin="10dp"
+                        android:id="@+id/icon"
+                        android:background="@drawable/roundcorner"
+                        android:src="@drawable/screenshot"
+                        android:outlineAmbientShadowColor="@color/red"
+
+                        android:layout_alignParentEnd="true"
+                        android:layout_height="40dp"/>
+
+
+
+
+
+
+                </RelativeLayout>
+            </LinearLayout>
+        </androidx.appcompat.widget.Toolbar>
+       </androidx.cardview.widget.CardView>
+      <ScrollView
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:layout_below="@+id/ard">
+      <RelativeLayout
+          android:layout_width="match_parent"
+
+          android:layout_height="match_parent">
+      <androidx.appcompat.widget.AppCompatTextView
+          android:layout_width="match_parent"
+          android:id="@+id/tre"
+          android:layout_height="30dp"
+
+          android:text="Trending"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="270dp"
+            android:background="?attr/selectableItemBackground"
+            android:id="@+id/recyclerView"
+            android:scrollbars="horizontal"
+            android:layout_below="@id/tre"
+            />
+      <androidx.appcompat.widget.AppCompatTextView
+          android:layout_width="match_parent"
+          android:id="@+id/tr2"
+          android:layout_height="30dp"
+          android:layout_below="@+id/recyclerView"
+          android:text="Favorite"/>
+      <androidx.recyclerview.widget.RecyclerView
+          android:layout_width="match_parent"
+          android:layout_height="270dp"
+          android:id="@+id/recyclerView2"
+          android:scrollbars="horizontal"
+          android:layout_below="@id/tr2"
+          />
+
+
+          <androidx.appcompat.widget.AppCompatTextView
+              android:layout_width="match_parent"
+              android:id="@+id/tr3"
+              android:layout_height="30dp"
+              android:layout_below="@+id/recyclerView2"
+              android:text="Religion"/>
+          <androidx.recyclerview.widget.RecyclerView
+              android:layout_width="match_parent"
+              android:layout_height="270dp"
+              android:id="@+id/recyclerView3"
+              android:scrollbars="horizontal"
+              android:layout_below="@id/tr3"
+              android:layout_marginBottom="20dp"
+              />
+
+
+
+
+    </RelativeLayout>
+      </ScrollView>
+  </RelativeLayout>
